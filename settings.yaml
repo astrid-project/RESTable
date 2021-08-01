@@ -1,0 +1,10 @@
+commands:
+  packetbeat-start-service:
+    script: sudo systemctl start packetbeat
+    daemon: false
+  packetbeat-stop-service:
+    script: sudo systemctl stop packetbeat
+    daemon: false
+  packetbeat-restart-service:
+    script: sudo systemctl restart packetbeat
+    daemon: false

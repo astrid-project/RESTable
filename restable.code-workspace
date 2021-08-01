@@ -4,5 +4,10 @@
             "name": "RESTable",
             "path": "."
         }
-    ]
+    ],
+    "settings": {
+        "cSpell.words": [
+            "dotenv"
+        ]
+    }
 }
