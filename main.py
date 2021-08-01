@@ -6,11 +6,13 @@ from aenum import extend_enum
 from dynaconf import Dynaconf
 from fastapi import FastAPI, HTTPException
 
+from about import version
+
 settings = Dynaconf(
     settings_files=["settings.yaml", ".secrets.yaml"]
 )
 
-app = FastAPI(debug=True, title=settings.name, version='0.0.1', description=settings.description)
+app = FastAPI(debug=settings.get('debug', False), title=settings.name, version=version, description=settings.description)
 
 
 class CommandId(str, Enum):
