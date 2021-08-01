@@ -1,10 +1,15 @@
+name: Packetbeat
+description: Service action controller.
 commands:
-  packetbeat-start-service:
-    script: sudo systemctl start packetbeat
+  service-start:
+    script: service packetbeat start
     daemon: false
-  packetbeat-stop-service:
-    script: sudo systemctl stop packetbeat
+  service-stop:
+    script: service packetbeat stop
     daemon: false
-  packetbeat-restart-service:
-    script: sudo systemctl restart packetbeat
+  service-restart:
+    script: service packetbeat restart
+    daemon: false
+  service-status:
+    script: service packetbeat status
     daemon: false

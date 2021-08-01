@@ -1,6 +1,8 @@
 import subprocess
 from datetime import datetime
+from enum import Enum
 
+from aenum import extend_enum
 from dynaconf import Dynaconf
 from fastapi import FastAPI, HTTPException
 
@@ -8,7 +10,16 @@ settings = Dynaconf(
     settings_files=["settings.yaml", ".secrets.yaml"]
 )
 
-app = FastAPI()
+app = FastAPI(debug=True, title=settings.name, version='0.0.1', description=settings.description)
+
+
+class CommandId(str, Enum):
+    pass
+
+
+for cmd in settings.commands.keys():
+    extend_enum(CommandId, cmd, cmd)
+
 
 history = {}
 for command in settings.commands:
@@ -21,7 +32,7 @@ def view_commands():
 
 
 @app.get('/{command}')
-def view_command(command: str):
+def view_command(command: CommandId):
     if command not in settings.commands:
         raise HTTPException(
             status_code=404, detail=f'Command {command} not found')
@@ -31,7 +42,8 @@ def view_command(command: str):
 
 
 @app.post('/{command}')
-def execute_command(command: str):
+def execute_command(command: CommandId):
+    print(command)
     if command not in settings.commands:
         raise HTTPException(
             status_code=404, detail=f'Command {command} not found')
