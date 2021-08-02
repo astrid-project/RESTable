@@ -1,0 +1,8 @@
+# Copyright (c) 2020 Alex Carrega <contact@alexcarrega.com>
+# author: Alex Carrega <contact@alexcarrega.com>
+
+aenum==3.1.0
+dynaconf==3.1.4
+fastapi==0.68.0
+shyaml==0.6.2
+uvicorn==0.14.0
