@@ -1,3 +1,6 @@
+# Copyright (c) 2020 Alex Carrega <contact@alexcarrega.com>
+# author: Alex Carrega <contact@alexcarrega.com>
+
 import subprocess
 from datetime import datetime
 from enum import Enum
