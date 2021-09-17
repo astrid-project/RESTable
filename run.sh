@@ -4,4 +4,4 @@
 # author: Alex Carrega <contact@alexcarrega.com>
 
 PORT=$(cat settings.yaml | shyaml get-value port)
-uvicorn main:app --host 0.0.0.0 --port $PORT
+uvicorn src.main:app --host 0.0.0.0 --port $PORT

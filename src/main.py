@@ -9,7 +9,7 @@ from aenum import extend_enum
 from dynaconf import Dynaconf
 from fastapi import FastAPI, HTTPException
 
-from about import version
+from src.about import version
 
 settings = Dynaconf(
     settings_files=["settings.yaml", ".secrets.yaml"]
@@ -39,8 +39,7 @@ def view_commands():
 @app.get('/{command}')
 def view_command(command: CommandId):
     if command not in settings.commands:
-        raise HTTPException(
-            status_code=404, detail=f'Command {command} not found')
+        raise HTTPException(status_code=404, detail=f'Command {command} not found')
     output = settings.commands.get(command)
     output['history'] = history[command]
     return output
@@ -50,13 +49,12 @@ def view_command(command: CommandId):
 def execute_command(command: CommandId):
     print(command)
     if command not in settings.commands:
-        raise HTTPException(
-            status_code=404, detail=f'Command {command} not found')
+        raise HTTPException(status_code=404, detail=f'Command {command} not found')
     start = datetime.now()
     proc = run_script(command)
     end = datetime.now()
     output = {
-        'error': proc.returncode == None or proc.returncode > 0,
+        'error': proc.returncode is None or proc.returncode > 0,
         'stdout': process_data(proc.stdout),
         'stderr': process_data(proc.stderr),
         'returncode': proc.returncode,
