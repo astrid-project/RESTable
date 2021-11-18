@@ -6,4 +6,4 @@
 [![Release](https://img.shields.io/github/v/tag/alexcarrega/RESTable?label=release&logo=github)](https://github.com/alexcarrega/RESTable/releases)
 [![Docs](https://readthedocs.org/projects/RESTable/badge/?version=latest)](https://RESTable.readthedocs.io)
 
-TODO...
+Make [**HTTP**](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) [**REST**](https://en.wikipedia.org/wiki/Representational_state_transfer) **interface** for **standard** [**CLI**](https://en.wikipedia.org/wiki/Command-line_interface) **applications**
