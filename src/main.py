@@ -15,7 +15,8 @@ settings = Dynaconf(
     settings_files=["settings.yaml", ".secrets.yaml"]
 )
 
-app = FastAPI(debug=settings.get('debug', False), title=settings.name, version=version, description=settings.description)
+app = FastAPI(debug=settings.get('debug', False), title=settings.name,
+              version=version, description=settings.description)
 
 
 class CommandId(str, Enum):
@@ -26,9 +27,7 @@ for cmd in settings.commands.keys():
     extend_enum(CommandId, cmd, cmd)
 
 
-history = {}
-for command in settings.commands:
-    history[command] = []
+history = {command: [] for command in settings.commands}
 
 
 @app.get('/')
@@ -39,7 +38,8 @@ def view_commands():
 @app.get('/{command}')
 def view_command(command: CommandId):
     if command not in settings.commands:
-        raise HTTPException(status_code=404, detail=f'Command {command} not found')
+        raise HTTPException(status_code=404,
+                            detail=f'Command {command} not found')
     output = settings.commands.get(command)
     output['history'] = history[command]
     return output
@@ -49,7 +49,8 @@ def view_command(command: CommandId):
 def execute_command(command: CommandId):
     print(command)
     if command not in settings.commands:
-        raise HTTPException(status_code=404, detail=f'Command {command} not found')
+        raise HTTPException(status_code=404,
+                            detail=f'Command {command} not found')
     start = datetime.now()
     proc = run_script(command)
     end = datetime.now()
@@ -74,6 +75,10 @@ def run_script(command: str):
     command_data = settings.commands.get(command)
     print(command_data.script)
     if not command_data.get('daemon', False):
-        return subprocess.run(command_data.script, check=False, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+        return subprocess.run(command_data.script, check=False, shell=True,
+                              stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                              universal_newlines=True)
     else:
-        return subprocess.Popen(command_data.script, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True)
+        return subprocess.Popen(command_data.script, shell=True,
+                                stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                start_new_session=True)

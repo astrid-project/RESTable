@@ -7,7 +7,23 @@
     ],
     "settings": {
         "cSpell.words": [
-            "dotenv"
+            "asgiref",
+            "astroid",
+            "autopep",
+            "dotenv",
+            "fastapi",
+            "isort",
+            "mccabe",
+            "pipfile",
+            "platformdirs",
+            "pyflakes",
+            "pylint",
+            "pyyaml",
+            "shyaml",
+            "soutoml",
+            "starlette",
+            "uvicorn",
+            "wrapt"
         ]
     }
 }
