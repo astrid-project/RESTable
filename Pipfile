@@ -5,28 +5,40 @@ name = "pypi"
 
 [packages]
 aenum = "==3.1.0"
-asgiref = "==3.4.1"
 click = "==8.0.1"
 dynaconf = "==3.1.7"
 fastapi = "==0.68.1"
-h11 = "==0.12.0"
 pydantic = "==1.8.2"
 PyYAML = "==5.4.1"
 rich = "*"
 shyaml = "==0.6.2"
-starlette = "==0.14.2"
-typing-extensions = "==3.10.0.2"
 uvicorn = "==0.15.0"
 
 [dev-packages]
-autopep8 = "*"
-flake8 = "*"
-mccabe = "*"
-pycodestyle = "*"
-pyflakes = "*"
-pylint = "*"
-vprof = "*"
-black = "*"
+autopep8 = "*" # https://github.com/hhatto/autopep8
+black = "*" # https://github.com/psf/black
+flake8 = "*" # https://flake8.pycqa.org
+mccabe = "*" # https://github.com/PyCQA/mccabe
+pycodestyle = "*" # https://github.com/PyCQA/pycodestyle
+pyflakes = "*" # https://github.com/PyCQA/pyflakes
+pylint = "*" # https://pylint.org/
+vprof = "*" # https://github.com/nvdv/vprof
+graphviz = "*"
 
 [requires]
-python_version = "3.10"
+python_version = "3.10.1"
+
+[scripts]
+# program
+RESTable = "bash run.sh"
+# dev
+codestyle = "find src -iname '*.py' -exec pycodestyle --first {} \\;"
+complexity = "find src -iname '*.py' -exec python -m mccabe {} \\;"
+error-check = "python3 -m pyflakes src"
+format-black = "black src/"
+format-pep8 = "find src -iname '*.py' -exec autopep8 --in-place --aggressive --aggressive {} \\;"
+graph = "pycallgraph src/ --output=graph.svg"
+linter = "find src -iname '*.py' -exec pylint {} \\;"
+profiler-start = "vprof -c cmh src/main.py --output-file profiler.json"
+profiler-view = "vprof --input-file profiler.json"
+style-guide = "flake8 src/"
