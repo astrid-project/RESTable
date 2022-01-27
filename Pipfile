@@ -34,6 +34,7 @@ python_version = "3.10.1"
 start = "bash scripts/start.sh"
 requirements = "bash scripts/requirements.sh"
 # dev
+requirements-dev = "bash scripts/requirements-dev.sh"
 codestyle = "find src -iname '*.py' -exec pycodestyle --first {} \\;"
 complexity = "find src -iname '*.py' -exec python -m mccabe {} \\;"
 error-check = "python3 -m pyflakes src"
