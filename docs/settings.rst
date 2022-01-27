@@ -27,9 +27,9 @@ The schema of this file is the following:
 | ``parameters``     | Dictionary [3]_ | Available parameters       |                                   | False    |      |
 +--------------------+-----------------+----------------------------+-----------------------------------+----------+------+
 
-.. [1] Key: command ID, value: :ref:`commands-settings-model`.
-.. [2] Key: configuration ID, value: :ref:`configurations-settings-model`.
-.. [3] Key: parameter ID, value: :ref:`parameters-settings-model`.
+.. [1] Key: command ID (String), value: :ref:`commands-settings-model`.
+.. [2] Key: configuration ID (String), value: :ref:`configurations-settings-model`.
+.. [3] Key: parameter ID (String), value: :ref:`parameters-settings-model`.
 
 .. |REST| replace:: :abbr:`REST (Representational State Transfer)`
 .. |TCP| replace:: :abbr:`TCP (Transmission Control Protocol)`
