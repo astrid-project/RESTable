@@ -19,13 +19,14 @@ typing-extensions = "==3.10.0.2"
 uvicorn = "==0.15.0"
 
 [dev-packages]
-autopep8 = "==1.5.7"
-flake8 = "==3.9.2"
-mccabe = "==0.6.1"
-pycodestyle = "==2.7.0"
-pyflakes = "==2.3.1"
-pylint = "==2.11.1"
-vprof = "==0.38"
+autopep8 = "*"
+flake8 = "*"
+mccabe = "*"
+pycodestyle = "*"
+pyflakes = "*"
+pylint = "*"
+vprof = "*"
+black = "*"
 
 [requires]
 python_version = "3.10"
