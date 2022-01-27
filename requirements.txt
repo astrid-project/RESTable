@@ -7,14 +7,18 @@
 
 -i https://pypi.org/simple
 aenum==3.1.0
-asgiref==3.4.1
+asgiref==3.5.0; python_version >= '3.7'
 click==8.0.1
+colorama==0.4.4; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
+commonmark==0.9.1
 dynaconf==3.1.7
 fastapi==0.68.1
-h11==0.12.0
+h11==0.13.0; python_version >= '3.6'
 pydantic==1.8.2
+pygments==2.11.2; python_version >= '3.5'
 pyyaml==5.4.1
+rich==11.0.0
 shyaml==0.6.2
-starlette==0.14.2
-typing-extensions==3.10.0.2
+starlette==0.14.2; python_version >= '3.6'
+typing-extensions==4.0.1; python_version >= '3.6'
 uvicorn==0.15.0

@@ -8,6 +8,6 @@ To run `RESTable`:
 .. code-block:: console
 
     cd RESTable
-    run.sh
+    bash script/start.sh
 
 .. |REST| replace:: :abbr:`REST (Representational State Transfer)`

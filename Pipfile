@@ -19,18 +19,20 @@ autopep8 = "*" # https://github.com/hhatto/autopep8
 black = "*" # https://github.com/psf/black
 flake8 = "*" # https://flake8.pycqa.org
 mccabe = "*" # https://github.com/PyCQA/mccabe
+pycallgraph = "*" # https://pycallgraph.readthedocs.io/en/master/
 pycodestyle = "*" # https://github.com/PyCQA/pycodestyle
 pyflakes = "*" # https://github.com/PyCQA/pyflakes
 pylint = "*" # https://pylint.org/
+setuptools = "==57.5.0" # for pycallgraph
 vprof = "*" # https://github.com/nvdv/vprof
-graphviz = "*"
 
 [requires]
 python_version = "3.10.1"
 
 [scripts]
 # program
-RESTable = "bash run.sh"
+start = "bash scripts/start.sh"
+requirements = "bash scripts/requirements.sh"
 # dev
 codestyle = "find src -iname '*.py' -exec pycodestyle --first {} \\;"
 complexity = "find src -iname '*.py' -exec python -m mccabe {} \\;"
