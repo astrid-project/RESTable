@@ -23,7 +23,7 @@ class Configurations(Base):
         pass
 
     label = "configuration"
-    data = settings.configurations
+    data = settings.get("configurations", [])
 
     class SettingsModel(BaseModel):
         path: str

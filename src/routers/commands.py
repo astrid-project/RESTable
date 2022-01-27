@@ -20,7 +20,7 @@ class Commands(Base):
         pass
 
     label = "command"
-    data = settings.commands
+    data = settings.get("commands", [])
 
     class SettingsModel(Base.Model):
         script: str

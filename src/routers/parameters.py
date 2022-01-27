@@ -22,7 +22,7 @@ class Parameters(Base):
         pass
 
     label = "parameter"
-    data = settings.parameters
+    data = settings.get("parameters", [])
 
     class SettingsModel(Base.Model):
         source: str
