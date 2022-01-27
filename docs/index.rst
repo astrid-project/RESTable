@@ -1,9 +1,9 @@
 .. RESTable documentation master file.
 
-Welcome to |REST|able documentation!
+Welcome to RESTable documentation!
 ====================================
 
-TODO
+Make |HTTP| |REST|  interface for standard |CLI| applications.
 
 Compatibility
 =============
@@ -61,4 +61,6 @@ Indices and tables
 
 
 .. |APIs| replace:: :abbr:`APIs (Application Program Interfaces)`
+.. |CLI| replace:: :abbr:`CLI (Command Line Interface)`
+.. |HTTP| replace:: :abbr:`HTTP (HyperText Transfer Protocol)`
 .. |REST| replace:: :abbr:`REST (Representational State Transfer)`
