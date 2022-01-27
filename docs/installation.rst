@@ -12,7 +12,7 @@ Download from `GitHub <https://github.com/guard-project/RESTable>`_.
     pip install -r requirements.txt
 
 
-`|REST|able` requires `Python` version 3.5+.
+`RESTable` requires `Python` version 3.5+.
 It's also working with `PyPy` and `PyPy3`.
 
 .. |REST| replace:: :abbr:`REST (Representational State Transfer)`

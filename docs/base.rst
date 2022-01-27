@@ -12,7 +12,7 @@ Action Model
 +----------------+--------------+-------------------------------------------------------+---------+----------+
 | Field          | Type         | Description                                           | Example | Required |
 +----------------+--------------+-------------------------------------------------------+---------+----------+
-| ``error`       | Boolean      | Indicates if the action is executed correctly or not. | True    | True     |
+| ``error``      | Boolean      | Indicates if the action is executed correctly or not. | True    | True     |
 +----------------+--------------+-------------------------------------------------------+---------+----------+
 | ``stdout``     | List(String) | Standard output of the action exection.               |         | True     |
 +----------------+--------------+-------------------------------------------------------+---------+----------+

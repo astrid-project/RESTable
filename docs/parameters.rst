@@ -14,7 +14,7 @@ Parameters Settings Model
 +-------------+-------------------+-------------------------------------------------------------------+----------------------+----------+
 | Field       | Type              | Description                                                       | Example              | Required |
 +-------------+-------------------+-------------------------------------------------------------------+----------------------+----------+
-| ``source`   | String            | Path of the configuration file that includes the parameter.       | /opt/test.json       | True     |
+| ``source``  | String            | Path of the configuration file that includes the parameter.       | /opt/test.json       | True     |
 +-------------+-------------------+-------------------------------------------------------------------+----------------------+----------+
 | ``format``  | Enum(json,yaml)   | Format of the configuration file where the parameter is included. | yaml                 | True     |
 +-------------+-------------------+-------------------------------------------------------------------+----------------------+----------+
@@ -31,11 +31,11 @@ Parameters Output Model
 
 Merge to :ref:`parameters-settings-model` with the following model:
  
-+----------+------+------------------+---------+----------+
-| Field    | Type | Description      | Example | Required |
-+----------+------+------------------+---------+----------+
-| ``value` | Any  | Parameter value. | 1.2     | True     |
-+----------+------+------------------+---------+----------+
++-----------+------+------------------+---------+----------+
+| Field     | Type | Description      | Example | Required |
++-----------+------+------------------+---------+----------+
+| ``value`` | Any  | Parameter value. | 1.2     | True     |
++-----------+------+------------------+---------+----------+
 
 
 Read
@@ -76,7 +76,7 @@ To update the values of multiple parameters at the same time it is possible to u
 
     - key: Parameter ID;
     - value: any possible value.
-    - 
+
     :reqheader Content-Type: application/json
     :resheader Content-Type: application/json
 

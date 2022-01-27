@@ -8,13 +8,13 @@ TODO
 Compatibility
 =============
 
-`|REST|able` requires Python 3.5+.
+`RESTable` requires Python 3.5+.
 
 
 Documentation
 =============
 
-This part of the documentation will show you how to get started in using `|REST|able`.
+This part of the documentation will show you how to get started in using `RESTable`.
 
 .. toctree::
    :maxdepth: 1

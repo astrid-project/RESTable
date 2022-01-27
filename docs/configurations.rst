@@ -29,11 +29,11 @@ Configurations Output Model
 
 Merge to :ref:`configurations-settings-model` with the following model:
 
-+------------+------+--------------------------------+---------+----------+
-| Field      | Type | Description                    | Example | Required |
-+------------+------+--------------------------------+---------+----------+
-| ``content` | Any  | Content of configuration file. |         | True     |
-+------------+------+--------------------------------+---------+----------+
++-------------+------+--------------------------------+---------+----------+
+| Field       | Type | Description                    | Example | Required |
++-------------+------+--------------------------------+---------+----------+
+| ``content`` | Any  | Content of configuration file. |         | True     |
++-------------+------+--------------------------------+---------+----------+
 
 
 Read
@@ -74,7 +74,7 @@ To update the values of multiple configurations at the same time it is possible 
 
     - key: Configuration ID;
     - value: any possible value.
-    - 
+
     :reqheader Content-Type: application/json
     :resheader Content-Type: application/json
 

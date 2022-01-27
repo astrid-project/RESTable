@@ -3,7 +3,7 @@
 Running
 =======
 
-To run `|REST|able`:
+To run `RESTable`:
 
 .. code-block:: console
 
