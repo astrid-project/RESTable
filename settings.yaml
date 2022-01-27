@@ -1,20 +1,29 @@
-# Copyright (c) 2020-2029 Alex Carrega <contact@alexcarrega.com>
-# author: Alex Carrega <contact@alexcarrega.com>
+# Copyright (c) 2020-2029 GUARD Project <guard-project.eu>
+# author: Alex Carrega <alessandro.carrega@cnit.it>
 
 port: 9999
-debug: True
-name: Packetbeat
-description: Service action controller.
+debug: false
+project: GUARD
+title: RESTable Test
+description: Testing RESTable features.
 commands:
-  service-start:
-    script: service packetbeat start
+  list:
+    script: ls
     daemon: false
-  service-stop:
-    script: service packetbeat stop
+  current-dir:
+    script: pwd
     daemon: false
-  service-restart:
-    script: service packetbeat restart
-    daemon: false
-  service-status:
-    script: service packetbeat status
-    daemon: false
+configurations:
+  test-json:
+    path: tests/test.json
+    format: json
+  test-yaml:
+    path: tests/test.yaml
+    format: yaml
+parameters:
+  enabled:
+    source: tests/test.json
+    format: json
+    xpath:
+      - agent
+      - enabled

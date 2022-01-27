@@ -1,5 +1,6 @@
 # Copyright (c) 2020-2029 GUARD Project <guard-project.eu>
 # author: Alex Carrega <alessandro.carrega@cnit.it>
 
-[flake8]
-max-line-length = 100
+from dynaconf import Dynaconf
+
+settings = Dynaconf(settings_files=["settings.yaml", ".secrets.yaml"])

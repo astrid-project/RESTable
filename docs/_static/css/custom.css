@@ -1,0 +1,27 @@
+th.head>p {
+    margin-bottom: 0px !important;
+}
+
+div.admonition>ul.simple {
+    margin-bottom: 0px !important;
+}
+
+div.admonition>p:last-child {
+    margin-bottom: 0px !important;
+}
+
+dl.footnote.brackets>dt {
+    display: inline-block !important;
+    width: 4%;
+    text-align: center;
+}
+
+dl.footnote.brackets>dd {
+    display: inline-block !important;
+    width: 95%;
+    margin-left: 0px;
+}
+
+dl.footnote.brackets>dd>p {
+    font-size: 14px !important;
+}
