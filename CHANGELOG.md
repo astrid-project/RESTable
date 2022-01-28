@@ -7,5 +7,4 @@
 - Configurations management.
 - Parameters management.
 
-
 ## 0.0.2
