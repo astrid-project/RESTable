@@ -1,9 +1,9 @@
 # Copyright (c) 2020-2029 GUARD Project <guard-project.eu>
 # author: Alex Carrega <alessandro.carrega@cnit.it>
 
-.history
 __pycache__
-/docs/.build
+.history
 /.tmp
+/docs/.build
 /log
 Pipfile.lock
