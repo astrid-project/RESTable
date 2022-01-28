@@ -1,4 +1,4 @@
-# Copyright (c) 2020-2029 GUARD Project <guard-project.eu>
+# Copyright (c) 2020-2029 GUARD Project (https://www.guard-project.eu)
 # author: Alex Carrega <alessandro.carrega@cnit.it>
 
 from fastapi import FastAPI
