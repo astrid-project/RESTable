@@ -61,7 +61,7 @@ class Base:
             error=res.returncode is None or res.returncode > 0,
             stdout=cls.process(res.stdout),
             stderr=cls.process(res.stderr),
-            returncode=res.returncode or -1,
+            returncode=res.returncode or 0,
             start=start,
             end=end,
         )
