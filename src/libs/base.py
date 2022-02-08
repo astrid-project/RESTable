@@ -58,7 +58,7 @@ class Base:
         res = callback(cls.get(id), **callback_kwargs)
         end = datetime.now()
         data = cls.ActionModel(
-            error=res.returncode is None or res.returncode > 0,
+            error=res.returncode is not None and res.returncode > 0,
             stdout=cls.process(res.stdout),
             stderr=cls.process(res.stderr),
             returncode=res.returncode or 0,
