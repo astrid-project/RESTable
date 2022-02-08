@@ -44,8 +44,11 @@ class Base:
 
     @staticmethod
     def process(data: str) -> List[str]:
-        __process = map(lambda item: item.strip(), data.split("\n"))
-        return list(filter(lambda item: item, __process))
+        try:
+            __process = map(lambda item: item.strip(), data.split("\n"))
+            return list(filter(lambda item: item, __process))
+        except Exception:
+            return []
 
     @classmethod
     def action(
