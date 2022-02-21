@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 
 project = 'CB-Manager'
-copyright = '2020-2022 - GUARD Project <http://guard-project.eu>'
+copyright = '2020-2022 - ASTRID Project <http://astrid-project.eu>'
 author = 'Alex Carrega <alessandro.carrega@cnit.it>'
 
 
@@ -79,7 +79,7 @@ html_css_files = [
 html_favicon = '../logo.ico'
 html_theme = 'sphinx_rtd_theme'
 
-issues_github_path = "guard-project/cb-manager"
+issues_github_path = "astrid-project/cb-manager"
 
 nitpick_ignore = [
     ('any', 'falcon.Request'),
